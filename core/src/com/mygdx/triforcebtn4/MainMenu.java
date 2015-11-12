@@ -1,5 +1,6 @@
 package com.mygdx.triforcebtn4;
-
+//Had help From Don to learn how to make text buttons https://github.com/captainkesty/vidyagams.git
+//Saw grondins code During his presentation to see how to se seperate files
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -14,9 +15,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 public class MainMenu extends Game implements InputProcessor {
     TbMenu tbMenu;
     Stage stage;
-    //TextButton newGameButton, instruction;
-    //BitmapFontCache creators, begin;
-    boolean bBegin = true;
+
     TextButton TbPlay, TbInstruct;
 
     @Override
@@ -25,10 +24,10 @@ public class MainMenu extends Game implements InputProcessor {
 
         stage = new Stage();
         tbMenu = new TbMenu();
-        Skin skin = tbMenu.getSkin();
+        Skin skin = tbMenu.getSkin();//Calls skin
 
 
-        TbPlay = new TbText("Play", skin); // Use the initialized skin
+        TbPlay = new TbText("Play", skin); // Use the initialized skin from TbMenu
         TbPlay.setPosition(Gdx.graphics.getWidth() / 2 - Gdx.graphics.getWidth() / 8, Gdx.graphics.getHeight() / 3 * 2);
         TbInstruct = new TbText("Instructions", skin);
         TbInstruct.setPosition(Gdx.graphics.getWidth() / 2 - Gdx.graphics.getWidth() / 8, Gdx.graphics.getHeight() / 3);
