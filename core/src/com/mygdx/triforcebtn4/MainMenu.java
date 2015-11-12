@@ -20,7 +20,6 @@ public class MainMenu extends Game implements InputProcessor {
 
     @Override
     public void create() {
-        //BitmapFont font = new BitmapFont();
 
         stage = new Stage();
         tbMenu = new TbMenu();
